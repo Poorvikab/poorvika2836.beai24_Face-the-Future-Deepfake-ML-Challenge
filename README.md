@@ -88,7 +88,18 @@ Then open your browser and visit:
 ➡️ http://127.0.0.1:8000/docs
 
 
-# 🧩 6. Summary
+# 📁 6. Project File Descriptions
+
+| File/Folder             | Description                                                                                                                                                                                               
+| train.py                | Main training script. Loads and augments the dataset, fine-tunes the EfficientNet-B4 model, and saves the best model as `model_best.pth`.                                                                          
+| inference.py            | Generates predictions for the test images using the fine-tuned model. Includes **Test-Time Augmentation (TTA)** for robustness and outputs two JSONs — one for official submission and                              one with confidence scores. 
+
+| app.py                  | A **FastAPI web service** that allows users to upload an image and instantly receive a real/fake prediction with confidence. Runs the trained model as a local API.                                                
+| feature_viz.py          | Extracts deep features from the trained model and visualizes them in 2D using **t-SNE** to show how the model separates real vs fake faces in feature space.                                                       
+| prepare_labels.py       | Combines individual real/fake label JSON files into a unified `train_labels.json` used for training.                                                                                                               
+| model.py                | Defines the **EfficientNet-B4** architecture used for fine-tuning, modifying its classifier layer to output two classes (real/fake).                                                                               
+                                                                                                                                                
+# 🧩 7. Summary
 
 Goal: Detect AI-generated deepfake images.
 
