@@ -50,8 +50,8 @@ Face-the-Future-Deepfake-ML-Challenge/
 │   ├── train.py
 │   ├── inference.py
 │   └── prepare_labels.py
-│
-├── app.py                   # FastAPI app
+│   └── app.py # FastAPI app
+│                  
 ├── model_best.pth           # Downloaded model weights
 ├── poorvika2836.beai24.json # Prediction results
 ├── requirements.txt
@@ -83,7 +83,7 @@ python src/inference.py
 This will read images from data/test/ and produce a JSON output file.
 
 🌐 Run FastAPI (Web Inference)
-python app.py
+python src/app.py
 
 Then open your browser and visit:
 ➡️ http://127.0.0.1:8000/docs
