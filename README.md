@@ -30,6 +30,7 @@ Due to GitHub’s 100 MB file size limit, the trained model weights (model_best.
 
 Once downloaded, place it inside the root project folder, like this:
 
+```
 Face-the-Future-Deepfake-ML-Challenge/
 │
 ├── model_best.pth          ← (place here)
@@ -37,11 +38,11 @@ Face-the-Future-Deepfake-ML-Challenge/
 ├── requirements.txt
 ├── README.md
 └── poorvika2836.beai24.json
-
+```
 # 🧱 4. Folder Structure
 
 After setting up, your project directory should look like this:
-
+```
 Face-the-Future-Deepfake-ML-Challenge/
 │
 ├── src/
@@ -56,39 +57,45 @@ Face-the-Future-Deepfake-ML-Challenge/
 ├── requirements.txt
 ├── poorvika2836_presentation.pptx
 └── README.md
+```
 
 # 🚀 5. How to Open & Run the Project
 
 🧩 Clone the Repository
 
+```
 git clone https://github.com/Poorvikab/Face-the-Future-Deepfake-ML-Challenge.git
 cd Face-the-Future-Deepfake-ML-Challenge
-
+```
 Create and Activate Virtual Environment
-
+```
 python -m venv venv
 venv\Scripts\activate        # (Windows)
 # or
 source venv/bin/activate     # (macOS/Linux)
-
+```
 Install Requirements
-
+```
 pip install -r requirements.txt
-
+```
 
 ▶️ Run Inference (JSON Predictions)
-
+```
 python src/inference.py
+```
 This will read images from data/test/ and produce a JSON output file.
 
 🌐 Run FastAPI (Web Inference)
+```
 python src/app.py
-
+```
 Then open your browser and visit:
+```
 ➡️ http://127.0.0.1:8000/docs
 
-
+```
 # 📁 6. Project File Descriptions
+```
 
 | File/Folder             | Description                                                                                                                                                                                               
 | train.py                | Main training script. Loads and augments the dataset, fine-tunes the EfficientNet-B4 model, and saves the best model as `model_best.pth`.                                                                          
@@ -97,7 +104,8 @@ Then open your browser and visit:
 | app.py                  | A **FastAPI web service** that allows users to upload an image and instantly receive a real/fake prediction with confidence. Runs the trained model as a local API.                                                
 | feature_viz.py          | Extracts deep features from the trained model and visualizes them in 2D using **t-SNE** to show how the model separates real vs fake faces in feature space.                                                       
 | prepare_labels.py       | Combines individual real/fake label JSON files into a unified `train_labels.json` used for training.                                                                                                               
-| model.py                | Defines the **EfficientNet-B4** architecture used for fine-tuning, modifying its classifier layer to output two classes (real/fake).                                                                               
+| model.py                | Defines the **EfficientNet-B4** architecture used for fine-tuning, modifying its classifier layer to output two classes (real/fake).
+```           
                                                                                                                                                 
 # 🧩 7. Summary
 
