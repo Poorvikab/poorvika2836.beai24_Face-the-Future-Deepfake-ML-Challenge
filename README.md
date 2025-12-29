@@ -90,9 +90,9 @@ This will read images from data/test/ and produce a JSON output file.
 python src/app.py
 ```
 Then open your browser and visit:
+➡️
 ```
-➡️ http://127.0.0.1:8000/docs
-
+http://127.0.0.1:8000/docs
 ```
 # 📁 6. Project File Descriptions
 ```
