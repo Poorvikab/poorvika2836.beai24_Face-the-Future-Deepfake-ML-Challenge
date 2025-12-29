@@ -8,8 +8,6 @@ The model outputs a JSON file with predictions (real / fake) and confidence scor
 
 A FastAPI interface is also included for real-time inference — upload an image and get an authenticity prediction instantly.
 
----
-
 # ⚙️ 2. Tech Stack & Dependencies
 
 | Component           | Technology Used                          | Purpose                               |
@@ -22,7 +20,6 @@ A FastAPI interface is also included for real-time inference — upload an image
 | **Version Control** | Git & GitHub                             | Code management                       |
 | **Hardware**        | NVIDIA GPU (CUDA)                        | Accelerated fine-tuning               |
 
----
 
 # 💾 3. Model File Location
 
@@ -42,7 +39,6 @@ Face-the-Future-Deepfake-ML-Challenge/
 ├── README.md
 └── poorvika2836.beai24.json
 ```
----
 
 # 🧱 4. Folder Structure
 
